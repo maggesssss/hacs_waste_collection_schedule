@@ -7,7 +7,7 @@ Support for schedules provided by [Stadtwerke Aschaffenburg](https://www.stwab.d
 ```yaml
 waste_collection_schedule:
   sources:
-    - name: stadtwerke_aschaffenburg
+    - name: stwab_de
       args:
         district: DISTRICT
         year: YEAR
@@ -27,7 +27,7 @@ waste_collection_schedule:
 ```yaml
 waste_collection_schedule:
   sources:
-    - name: stadtwerke_aschaffenburg
+    - name: stwab_de
       args:
         district: 1649
         year: 2022
