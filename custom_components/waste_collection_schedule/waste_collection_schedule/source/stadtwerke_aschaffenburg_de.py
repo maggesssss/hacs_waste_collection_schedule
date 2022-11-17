@@ -10,18 +10,18 @@ _LOGGER = logging.getLogger(__name__)
 TITLE = "Stadtwerke Aschaffenburg"
 DESCRIPTION = "Source for Stadtwerke Aschaffenburg."
 URL = "https://www.stwab.de/"
-TEST_CASES = {"Bezirk": {"bezirk": "1649", "year": 2022}}
+TEST_CASES = {"Bezirk Innenstadt": {"district": "1649", "year": 2022}}
 
 
 class Source:
-    def __init__(self, bezirk, year):
-        self._bezirk_id = bezirk
+    def __init__(self, district, year):
+        self._district = district
         self._year = year
         self._ics = ICS()
 
     def fetch(self):
         params = {
-            "Bezirk_ID": self._bezirk_id,
+            "Bezirk_ID": self._district,
             "Jahr": self._year,
             "SessionMandant": "Aschaffenburg",
             "Anwendung": "Abfuhrkalender",
